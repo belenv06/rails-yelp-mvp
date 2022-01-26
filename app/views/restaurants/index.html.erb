@@ -1,0 +1,17 @@
+<div class="container mt-5">
+
+    <% @restaurants.each do |restaurant| %>
+
+    <div class="container my-4 d-flex justify-content-between">
+      <p> <%= link_to restaurant.name, restaurant_path(restaurant) %> </p>
+      <%# <%= link_to "mas info", restaurant_path(restaurant) %>
+      <%= link_to "Edit", edit_restaurant_path(restaurant) %>
+    </div>
+      <% end %>
+    </ul>
+
+    <div class="container my-4">
+     <%= link_to "Crear", new_restaurant_path(@restaurant), class: "btn btn-primary" %>
+    </div>
+
+</div>
